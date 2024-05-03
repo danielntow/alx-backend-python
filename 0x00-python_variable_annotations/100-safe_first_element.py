@@ -1,25 +1,12 @@
 #!/usr/bin/env python3
-
-"""
-Module: list_operations
-
-This module provides functions for list operations.
-"""
-
-from typing import Any, List, Union
+'''Task 10:  Duck typing - first element of a sequence
+'''
+from typing import Any, Sequence, Union
 
 
-def safe_first_element(lst: List[Any]) -> Union[Any, None]:
-    """
-    Return the first element of a list if it exists, otherwise return None.
-
-    Args:
-        lst (List[Any]): The input list.
-
-    Returns:
-        Union[Any, None]: The first element of the list if it
-        exists, otherwise None.
-    """
+def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
+    '''Retrieves the first element of a sequence if it exists.
+    '''
     if lst:
         return lst[0]
     else:
