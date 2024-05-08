@@ -3,7 +3,8 @@
 """
 Module: async_comprehension
 
-This module provides a coroutine that collects 10 random numbers using async comprehension.
+This module provides a coroutine that collects 10 random numbers
+using async comprehension.
 """
 
 import asyncio
