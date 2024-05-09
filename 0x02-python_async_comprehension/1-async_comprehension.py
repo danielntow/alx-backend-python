@@ -7,6 +7,7 @@ This module provides a coroutine that collects 10 random numbers
 using async comprehension.
 """
 
+
 import asyncio
 from typing import List
 

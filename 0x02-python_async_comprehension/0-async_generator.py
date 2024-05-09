@@ -6,6 +6,7 @@ Module: async_generator
 This module provides a coroutine that yields random numbers asynchronously.
 """
 
+
 import asyncio
 import random
 from typing import AsyncGenerator
