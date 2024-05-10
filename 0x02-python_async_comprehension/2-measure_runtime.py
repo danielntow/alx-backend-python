@@ -22,32 +22,7 @@ async def measure_runtime() -> float:
     Returns:
         float: The total runtime in seconds.
     """
-    # Start measuring the time
+
     start_time = time.time()
-
-    # Execute async_comprehension four times in parallel using asyncio.gather
-    await asyncio.gather(
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension(),
-        async_comprehension()
-    )
-
-    # Stop measuring the time
-    end_time = time.time()
-
-    # Calculate the total runtime
-    total_runtime = end_time - start_time
-
-    return total_runtime
-
-
-async def main() -> None:
-    """
-    Main function to execute and measure the runtime of async_comprehension.
-    """
-    total_runtime = await measure_runtime()
-    print(f"Total runtime: {total_runtime:.2f} seconds")
-
-if __name__ == "__main__":
-    asyncio.run(main())
+    await asyncio.gather(*(async_comprehension() for _ in range(4)))
+    return time.time() - start_time
